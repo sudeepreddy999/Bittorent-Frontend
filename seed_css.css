@@ -1,0 +1,50 @@
+body{
+    font-family: "Noto Sans", sans-serif;
+    background-color: rgb(17,27,35);   
+}
+p{
+    /* margin-top: 0px; */
+    color: white;
+}
+.header{
+    height: 43px;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #cbd7e45c;
+}
+.left_sec{
+    width: 100px;
+    /* background-color: blue; */
+    display: flex; justify-content: center; align-items: center;
+}
+.right_sec{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    width: 200px;
+    /* background-color: red; */
+}
+
+.box1{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+.box1:hover{
+    background-color:rgba(34, 56, 73, 0.446);
+}
+.header_txt{
+    font-size: small;
+}
+
+#signup{
+    background-color:rgb(34,56,73);
+    padding-left: 15px;
+    padding-right: 15px;
+    /* height: 40px; */
+    border-radius: 10px;
+}
