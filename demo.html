@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Tooltip</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Sign-in button positioning */
+        .signin-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Tooltip container */
+        .tooltip-container {
+            position: absolute;
+            top: 50px;
+            right: 20px;
+            background-color: white;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            display: none;
+            padding: 20px;
+            width: 250px;
+        }
+
+        /* Input fields styling */
+        .tooltip-container input[type="text"],
+        .tooltip-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Sign-in form button */
+        .tooltip-container .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .tooltip-container .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Close button for tooltip */
+        .close-tooltip {
+            cursor: pointer;
+            color: #888;
+            float: right;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .close-tooltip:hover {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sign-in Button -->
+    <button class="signin-btn" id="signin-btn">Sign In</button>
+
+    <!-- Tooltip Container for Sign-in Form -->
+    <div class="tooltip-container" id="tooltip-container">
+        <span class="close-tooltip" id="close-tooltip">&times;</span>
+        <h3>Sign In</h3>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button class="submit-btn" id="submit-btn">Sign In</button>
+    </div>
+
+    <script>
+        // JavaScript to handle tooltip visibility
+        const signInButton = document.getElementById('signin-btn');
+        const tooltipContainer = document.getElementById('tooltip-container');
+        const closeTooltip = document.getElementById('close-tooltip');
+
+        // Show the tooltip when sign-in button is clicked
+        signInButton.addEventListener('click', () => {
+            tooltipContainer.style.display = 'block';
+        });
+
+        // Hide the tooltip when close button is clicked
+        closeTooltip.addEventListener('click', () => {
+            tooltipContainer.style.display = 'none';
+        });
+
+        // Hide the tooltip when user clicks outside of it
+        window.addEventListener('click', function (event) {
+            if (!tooltipContainer.contains(event.target) && event.target !== signInButton) {
+                tooltipContainer.style.display = 'none';
+            }
+        });
+
+        // Add your sign-in logic here
+        document.getElementById('submit-btn').addEventListener('click', function () {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Example: Just alert the values for now
+            alert(`Username: ${username}\nPassword: ${password}`);
+
+            // Hide the tooltip after submission
+            tooltipContainer.style.display = 'none';
+        });
+    </script>
+
+</body>
+
+</html>
