@@ -1,0 +1,1 @@
+This is the updated dynamic content loaded via AJAX!
