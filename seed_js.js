@@ -101,3 +101,33 @@ const dropArea = document.getElementById('upload-area');
         const units = { B: 1, KB: 1024, MB: 1024 ** 2, GB: 1024 ** 3, TB: 1024 ** 4 };
         return size * units[unit];
     }
+
+// const download_sec = document.getElementsByClassName('download_sec');
+// const seed_sec = document.getElementsByClassName('seed');
+// const download_tab = document.getElementById('download');
+// const seed_tab = document.getElementById('seed');
+
+// download_tab.onclick = function(){
+//     download_sec.style.display = block;
+//     download_tab.style.backgroundColor = rgba(34, 56, 73, 0.446);
+//     seed_sec.style.display = none;
+
+// };
+const download_sec = document.getElementsByClassName('download_sec')[0]; // Select the first element
+const seed_sec = document.getElementsByClassName('seed')[0]; // Select the first element
+const download_tab = document.getElementById('download');
+const seed_tab = document.getElementById('seed');
+
+download_tab.onclick = function() {
+    // Show the download section
+    download_sec.style.display = 'block'; // Use quotes for 'block'
+    download_tab.style.backgroundColor = 'rgba(34, 56, 73, 0.446)'; // Use quotes for rgba
+    seed_sec.style.display = 'none'; // Use quotes for 'none'
+};
+
+seed_tab.onclick = function() {
+    // Show the seed section
+    seed_sec.style.display = 'block'; // Use quotes for 'block'
+    seed_tab.style.backgroundColor = 'rgba(34, 56, 73, 0.446)'; // Use quotes for rgba
+    download_sec.style.display = 'none'; // Use quotes for 'none'
+};
