@@ -1,117 +1,133 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>BitLoad</title>
-        <!-- link to css file -->
-        <link rel="stylesheet" href="seed_css.css">
-        <!-- links to fonts  -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-        
-    </head>
-    <body>
-        
-        <!-- code for starts here header -->
-        <div class="header">
-            <div class="left_sec">
-                <!-- <i class="material-icons" style="display: inline;">cloud</i> -->
-                <p style="display: inline;">Bitload</p>
 
-            </div>
-            <div class="right_sec">
-                <div id="download" class="box1">
-                    <p class="header_txt">Download</p>
-                </div>
+<head>
+    <title>BitLoad</title>
+    <!-- link to css file -->
+    <link rel="stylesheet" href="seed_css.css">
+    <!-- links to fonts  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
-                <div id="seed" class="box1">
-                    <p class="header_txt">Seed</p>
-                </div>
+</head>
 
-                <div id="faq" class="box1">
-                    <p class="header_txt">FAQ</p>
-                </div>
-                <div id="signup" class="box1">
-                    <p class="header_txt">Sign In</p>
-                </div>
+<body>
 
+    <!-- code for starts here header -->
+    <div class="header">
+        <div class="left_sec">
+            <!-- <i class="material-icons" style="display: inline;">cloud</i> -->
+            <p style="display: inline;">Bitload</p>
 
-            </div>
         </div>
-        <!-- code for header ends here -->
-        <!-- code for history and seed begins here -->
-        <div class="bottom_section">
-            <!-- code for history begins -->
-            <div class="history">
-                <p style="font-size: large; display: inline-flex;">History
-                    <span style="margin-left: 5px;" class="material-symbols-outlined">
+        <div class="right_sec">
+            <div id="download" class="box1">
+                <p class="header_txt">Download</p>
+            </div>
+
+            <div id="seed" class="box1">
+                <p class="header_txt">Seed</p>
+            </div>
+
+            <div id="faq" class="box1">
+                <p class="header_txt">FAQ</p>
+            </div>
+            <div id="signup" class="box1">
+                <p class="header_txt">Sign In</p>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- code for header ends here -->
+    <!-- code for history and seed begins here -->
+    <div class="bottom_section">
+        <!-- code for history begins -->
+        <div class="history">
+            <p style="font-size: large; display: inline-flex;">History
+                <span style="margin-left: 5px;" class="material-symbols-outlined">
                     history
-                    </span>
-                </p>
-                <div class="box2">
-                    <p style="display: inline-flex;"> 
-                        <span style="margin-right: 7px;" class="material-symbols-outlined">
+                </span>
+            </p>
+            <div class="box2">
+                <p style="display: inline-flex;" id="torrent-link">
+                    <span style="margin-right: 7px;" class="material-symbols-outlined">
                         draft
-                        </span>
-                        abc.torrent
-                        
-                    </p>
-                    <div>
-                        <p><span id="download_icon" class="material-symbols-outlined">
-                            download
-                        </span></p>
-                    </div>
-                    
-                </div>
-                
-            </div>
-            <!-- code for history ends -->
-            <!-- code for seed begins  -->
-            <div class="seed">
-                <h2 class="header-text">Seed Files</h2>
-        
-                <div class="upload-box" id="upload-area">
-                    <p class="upload-text" id="drop-area">Drag and drop files here</p>
-                    <p class="upload-subtext">or choose files to upload</p>
-                    <button class="button-1" id="fileElem">Choose Files</button>
-                    <input type="file" id="fileInput" multiple accept="*/*" style="display: none;" />
-                </div>
-        
-                <h3 class="section-title">Seeding</h3>
-                <div class="item-list" id="item-list">
-                </div>
-                <div class="footer">
-                    <button class="button-1">Set Upload Limit</button>
-                    <button class="button-1">Stop</button>
+                    </span>
+                    <a href="javascript:void(0)">abc.torrent</a> <!-- Making it clickable -->
+                </p>
+                <div>
+                    <p><span id="download_icon" class="material-symbols-outlined">download</span></p>
                 </div>
             </div>
 
-            <!-- code for seed ends  -->
-            <div class="download_sec" style="display: none;">
-                <h2 class="header-text">Download</h2>
-        
-                <div class="upload-box" id="upload-area">
-                    <p class="upload-text" id="drop-area">Drag and drop files here</p>
-                    <p class="upload-subtext">or choose files to upload</p>
-                    <button class="button-1" id="fileElem">Choose Files</button>
-                    <input type="file" id="fileInput" multiple accept="*/*" style="display: none;" />
-                </div>
-        
-                <h3 class="section-title">Seeding</h3>
-                <div class="item-list" id="item-list">
-                </div>
-                <div class="footer">
-                    <button class="button-1">Set Upload Limit</button>
-                    <button class="button-1">Stop</button>
-                </div>
+        </div>
+        <!-- code for history ends -->
+        <!-- code for seed begins  -->
+        <div class="seed">
+            <h2 class="header-text">Seed Files</h2>
+
+            <div class="upload-box" id="upload-area">
+                <p class="upload-text" id="drop-area">Drag and drop files here</p>
+                <p class="upload-subtext">or choose files to upload</p>
+                <button class="button-1" id="fileElem">Choose Files</button>
+                <input type="file" id="fileInput" multiple accept="*/*" style="display: none;" />
+            </div>
+
+            <h3 class="section-title">Seeding</h3>
+            <div class="item-list" id="item-list">
+            </div>
+            <div class="footer">
+                <button class="button-1">Set Upload Limit</button>
+                <button class="button-1">Stop</button>
             </div>
         </div>
 
+        <!-- code for seed ends  -->
+        <div class="download_sec" style="display: none;">
+            <h2 class="header-text">Download Files</h2>
 
+            <div class="upload-box" id="download-upload-area">
+                <p class="upload-text" id="download-drop-area">Drag and drop files here to download</p>
+                <p class="upload-subtext">or choose files to download</p>
+                <button class="button-1" id="download-fileElem">Choose Files</button>
+                <input type="file" id="download-fileInput" multiple accept="*/*" style="display: none;" />
+            </div>
 
-        <!-- link to js file -->
-        <script src="seed_js.js"></script>
-    </body>
+            <h3 class="section-title">Downloading</h3>
+            <div class="item-list" id="download-item-list">
+            </div>
+        </div>
+
+        <div id="torrentModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Torrent Details</h2>
+                <form id="torrentForm">
+                    <label for="fileName">File Name:</label>
+                    <input type="text" id="fileName" name="fileName" placeholder="Enter file name" required>
+
+                    <label for="fileSize">File Size:</label>
+                    <input type="text" id="fileSize" name="fileSize" placeholder="Enter file size" required>
+
+                    <label for="peerCount">Number of Peers:</label>
+                    <input type="number" id="peerCount" name="peerCount" placeholder="Enter number of peers" required>
+                    <div class="Submit-btn">
+                    <button class="button-1">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!-- link to js file -->
+    <script src="seed_js.js"></script>
+</body>
+
 </html>

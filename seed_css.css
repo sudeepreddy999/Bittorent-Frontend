@@ -270,3 +270,124 @@ p{
     border-color: #2090f3; /* Highlight border color */
     background-color: rgba(32, 144, 243, 0.1); /* Optional background color change */
 }
+
+.download_sec{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    max-width: 960px;
+    width: 100%;
+    margin-left: 50px;
+}
+
+.icon-controls {
+    display: flex;
+    gap: 10px;
+    margin-right: 10px;
+}
+
+.icon-controls i {
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.icon-controls i:hover {
+    color: #2090f3;
+    transform: scale(1.5);
+    /* Increase size by 20% */
+    transition: transform 0.1s ease, color 0.3s ease;
+    /*Smooth transition */
+}
+
+/* Modal container */
+/* Modal container */
+/* Modal container */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    background-color: rgba(0, 0, 0, 0.7); /* Black with opacity */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #1e2b37; /* Dark background to match the page */
+    padding: 30px;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5); /* Softer shadow */
+    color: #ffffff; /* White text */
+    font-family: "Noto Sans", sans-serif; /* Use the same font as body */
+}
+
+
+/* Close button */
+.close {
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+/* Close button hover */
+.close:hover {
+    color: #2090f3; /* Highlight the close button on hover */
+}
+
+/* Input form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid #314e68; /* Match the border color to the page style */
+    border-radius: 6px;
+    background-color: #121e29; /* Dark background for input fields */
+    color: #ffffff; /* White text */
+}
+
+input::placeholder {
+    color: #90afcb; /* Lighter text for placeholders */
+}
+
+/* Modal button */
+button {
+    padding: 12px;
+    background-color: #2090f3; /* Bright button color */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0077c0; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight elevation effect */
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Minor shadow on click */
+}
+
+.Submit-btn {
+    text-align: center;
+}
