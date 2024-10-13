@@ -301,9 +301,7 @@ p{
     /*Smooth transition */
 }
 
-/* Modal container */
-/* Modal container */
-/* Modal container */
+
 .modal {
     display: none;
     position: fixed;
@@ -318,7 +316,7 @@ p{
     overflow: hidden; /* Prevent scrolling */
 }
 
-/* Modal content */
+
 .modal-content {
     background-color: #1e2b37; /* Dark background to match the page */
     padding: 30px;
@@ -331,7 +329,6 @@ p{
 }
 
 
-/* Close button */
 .close {
     float: right;
     font-size: 24px;
@@ -341,12 +338,12 @@ p{
     transition: color 0.3s ease;
 }
 
-/* Close button hover */
+
 .close:hover {
-    color: #2090f3; /* Highlight the close button on hover */
+    color: #2090f3; 
 }
 
-/* Input form */
+
 form {
     display: flex;
     flex-direction: column;
@@ -356,20 +353,20 @@ form {
 
 input {
     padding: 12px;
-    border: 1px solid #314e68; /* Match the border color to the page style */
+    border: 1px solid #314e68;
     border-radius: 6px;
-    background-color: #121e29; /* Dark background for input fields */
-    color: #ffffff; /* White text */
+    background-color: #121e29; 
+    color: #ffffff; 
 }
 
 input::placeholder {
-    color: #90afcb; /* Lighter text for placeholders */
+    color: #90afcb; 
 }
 
 /* Modal button */
 button {
     padding: 12px;
-    background-color: #2090f3; /* Bright button color */
+    background-color: #2090f3;
     color: white;
     border: none;
     border-radius: 6px;

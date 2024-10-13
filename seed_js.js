@@ -102,46 +102,36 @@ function convertToBytes(size, unit) {
     return size * units[unit];
 }
 
-// const download_sec = document.getElementsByClassName('download_sec');
-// const seed_sec = document.getElementsByClassName('seed');
-// const download_tab = document.getElementById('download');
-// const seed_tab = document.getElementById('seed');
 
-// download_tab.onclick = function(){
-//     download_sec.style.display = block;
-//     download_tab.style.backgroundColor = rgba(34, 56, 73, 0.446);
-//     seed_sec.style.display = none;
 
-// };
-const download_sec = document.getElementsByClassName('download_sec')[0]; // Select the first element
-const seed_sec = document.getElementsByClassName('seed')[0]; // Select the first element
+const download_sec = document.getElementsByClassName('download_sec')[0];
+const seed_sec = document.getElementsByClassName('seed')[0];
 const download_tab = document.getElementById('download');
 const seed_tab = document.getElementById('seed');
 
 download_tab.onclick = function () {
-    // Show the download section
-    download_sec.style.display = 'block'; // Use quotes for 'block'
-    download_tab.style.backgroundColor = 'rgba(34, 56, 73, 0.446)'; // Use quotes for rgba
-    seed_sec.style.display = 'none'; // Use quotes for 'none'
+
+    download_sec.style.display = 'block';
+    download_tab.style.backgroundColor = 'rgba(34, 56, 73, 0.446)';
+    seed_sec.style.display = 'none';
 };
 
 seed_tab.onclick = function () {
-    // Show the seed section
-    seed_sec.style.display = 'block'; // Use quotes for 'block'
-    seed_tab.style.backgroundColor = 'rgba(34, 56, 73, 0.446)'; // Use quotes for rgba
-    download_sec.style.display = 'none'; // Use quotes for 'none'
+
+    seed_sec.style.display = 'block';
+    seed_tab.style.backgroundColor = 'rgba(34, 56, 73, 0.446)';
+    download_sec.style.display = 'none';
 };
 
-// Select the download icon element
+
 const downloadIcon = document.getElementById('download_icon');
 
-// Add a click event listener to the download icon
 downloadIcon.addEventListener('click', function () {
-    // Hide the seed section
+
     const seedSection = document.querySelector('.seed');
     seedSection.style.display = 'none';
 
-    // Show the download section
+
     const downloadSection = document.querySelector('.download_sec');
     downloadSection.style.display = 'block';
 });
@@ -152,26 +142,24 @@ const downloadFileInput = document.getElementById('download-fileInput');
 const downloadFileElem = document.getElementById('download-fileElem');
 const downloadItemList = document.getElementById('download-item-list');
 
-// Prevent default drag behaviors
 ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
     downloadDropArea.addEventListener(eventName, preventDefaults, false);
     document.body.addEventListener(eventName, preventDefaults, false);
 });
 
-// Highlight drop area when file is dragged over
 ['dragenter', 'dragover'].forEach(eventName => {
     downloadDropArea.addEventListener(eventName, highlight, false);
 });
 
-// Unhighlight drop area when file is dragged out or dropped
+
 ['dragleave', 'drop'].forEach(eventName => {
     downloadDropArea.addEventListener(eventName, unhighlight, false);
 });
 
-// Handle file drop
+
 downloadDropArea.addEventListener('drop', handleDownloadDrop, false);
 
-// Trigger file selection when button clicked
+
 downloadFileElem.addEventListener('click', () => downloadFileInput.click());
 downloadFileInput.addEventListener('change', () => handleDownloadFiles(downloadFileInput.files));
 
@@ -217,28 +205,25 @@ function addDownloadFileToList(file, displayName) {
     updateProgressBar();
 }
 
-// Get the modal element
+
 var modal = document.getElementById("torrentModal");
 
-// Get the link that opens the modal (this assumes abc.torrent is wrapped in a clickable element)
-var torrentLink = document.querySelector(".box2 p"); // Select the abc.torrent element
+var torrentLink = document.querySelector(".box2 p");
 
-// Get the close button element
+
 var closeBtn = document.getElementsByClassName("close")[0];
 
-// When the user clicks on the torrent link, open the modal
-torrentLink.onclick = function() {
-    modal.style.display = "flex"; // Show the modal
+
+torrentLink.onclick = function () {
+    modal.style.display = "flex";
 }
 
-// When the user clicks on the close button, close the modal
-closeBtn.onclick = function() {
-    modal.style.display = "none"; // Hide the modal
+closeBtn.onclick = function () {
+    modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target == modal) {
-        modal.style.display = "none"; // Hide the modal
+        modal.style.display = "none";
     }
 }
